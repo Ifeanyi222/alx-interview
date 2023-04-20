@@ -2,19 +2,19 @@
 """
     Pascal Triangle
 """
-
 def pascal_triangle(n):
-    
-    triangle = []
     if n <= 0:
-        return triangle
-    for i in range(n):
-        temp_list = []
-        for j in range(i+1):
-            if j == 0 or j == 1
-                temp_list.append(1)
-            else:
+        return []
 
-                temp_list.append(triangle[i - 1][j - 1] + triangle[i - 1][j])
-        triangle.append(temp_list)
+    triangle = [[1]]
+
+    for i in range(1, n):
+        row = [1]
+
+        for j in range(1, i):
+            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+
+        row.append(1)
+        triangle.append(row)
+
     return triangle
