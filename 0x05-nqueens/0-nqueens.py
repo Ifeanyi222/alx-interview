@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""N queens"""
+"""0. N queens"""
 
 
 import sys
@@ -22,7 +22,7 @@ def place_queen(queen, column, prev_solution):
 
 
 def is_safe(k, i, array):
-    if i in array:
+    if k in array:
         return (False)
     else:
         return all(abs(array[column] - i) != k - column
